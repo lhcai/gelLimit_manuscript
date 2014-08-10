@@ -25,7 +25,7 @@
 %TCIDATA{Version=5.50.0.2960}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=BibTeX}
-%TCIDATA{LastRevised=Sunday, December 22, 2013 00:50:11}
+%TCIDATA{LastRevised=Sunday, August 10, 2014 15:18:51}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 
 \oddsidemargin -1.2cm
@@ -35,6 +35,7 @@
 \topmargin -3.5cm
 \textheight 22cm
 
+\input{tcilatex}
 
 \begin{document}
 
@@ -65,26 +66,16 @@
 
 \twocolumn[
   \begin{@twocolumnfalse}
-\noindent\LARGE{\textbf{Osmotic pressure of endogenous mucus reveals robustness of human airway defense}}
+\noindent\LARGE{\textbf{Ultrasoft elastomers near gel limit}}
 \vspace{0.6cm}
 
-\noindent\large{\textbf{Li-Heng Cai,\textit{$^{a,b,\dag}$} Brian Button,\textit{$^{c}$} Richard C. Boucher,\textit{$^{c}$} and
-Michael Rubinstein$^{\ast}$\textit{$^{a,b}$}}}
+\noindent\large{\textbf{Li-Heng Cai,\textit{$^{a,\dag}$} Thomas E. Kodger,\textit{$^{a,\dag}$} Jacqueline Flood,\textit{$^{a}$} and
+David A. Weitz $^{\ast}$\textit{$^{a}$}}}
 
 
 \vspace{0.6cm}
 
-\noindent \normalsize{\textbf{Abstract:} It was recently demonstrated that osmotic pressure of 
-mucus is an important measure for the status of an innate human airway defense system -- mucus 
-clearance, which is impaired at high mucus concentration for disease. We here 
-report the results of systematic, quantitative measurements of endogenous mucus osmotic pressure. We find that the osmotic pressure 
-of endogenous mucus is almost independent of pore size of the semipermeable membrane that separates mucus and reference
-buffer solution, suggesting that there are few free molecules contained  in endogneous mucus. Moreoever, it increases 
-as an unexpectedly slow linear rate with concentration up to a value comparable to that of mucus for 
-chronic obstructive pulmonary disease (COPD). This slow increase of mucus osmotic pressure indicates 
-that the mucus clearance can function within a wide range of mucus concentration, except for patients with lung diseases accompanied  with extremely high mucus concentration, such as cystic fibrosis (CF). 
-Moreover, the consistency in osmotic pressure of endogenous mucus and clinical sputum suggests osmotic pressure of
-mucus/sputum could be an important medical indication for the health status of lung.}
+\noindent \normalsize{\textbf{Abstract:} Modulus of an elastomer near gel limit}
 \vspace{0.5cm}
 \end{@twocolumnfalse}
 ]
@@ -98,12 +89,10 @@ mucus/sputum could be an important medical indication for the health status of l
 %Please use \dag to cite the ESI in the main text of the article.
 %If you article does not have ESI please remove the the \dag symbol from the title and the above footnotetext.
 
-\footnotetext{\textit{$^{a}$Department of Chemistry, $^{b}$Curriculum in
-Applied Sciences and Engineering, $^{c}$Cystic Fibrosis Research Center,
-School of Medicine, University of North Carolina, Chapel Hill, North
-Carolina 27599, United States. $^{\dag}$Current address: School of Applied
-Sciences and Engineering, Harvard University, Cambridge, Massachusetts
-02138, United States. $^{\ast}$Correspondence: mr@unc.edu}}
+\footnotetext{\textit{$^{a}$School of Engineering and Applied Sciences,
+Harvard University, Cambridge, Massachusetts 02138, United States. $^{\dag}$%
+These authors contributed to the work equally. $^{\ast}$Correspondence:
+weitz@seas.harvard.edu}}
 
 %additional addresses can be cited as above using the lower-case letters, c, d, e... If all authors are from the same address, no letter is required
 
@@ -115,435 +104,49 @@ Sciences and Engineering, Harvard University, Cambridge, Massachusetts
 %\TEXTsymbol{\backslash}footnotetext} entry in the the correct place in the
 %list.}
 
-Mucus is a critical component of mucociliary clearance \cite{Wanner1996},
-one of the major innate defense systems of human airways. The mucus protects
-the pulmonary surfaces from inhaled toxicants and infectious agents by
-trapping and transporting them out of lung by cilia-generated forces. The
-muco-ciliary clearance works efficiently for healthy people but fails for
-patients with lung diseases that are associated with concentrated mucus \cite%
-{Matsui2006}, such cystic fibrosis (CF) and chronic obstructive pulmonary
-disease (COPD) \cite{Boucher2007}. The failure of mucus clearance in disease
-could be physically explained by our recent Gel-on-Brush model \cite%
-{Button2012}that demonstrates that the concentrated mucus gel generates a
-high osmotic pressure, dehydrates the brushlike periciliary layer (PCL) in
-which the cilia are beating, and thus collapses the PCL, leading to impaired
-mucus clearance, as illustrated in Figure \ref{fig:fig1_AirwayDefense}. In
-spite of the importance of osmotic properties of mucus, to our knowledge
-there is no systematic quantitative measurement of the osmotic pressure of
-endogenous human airway mucus reported to date. 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{figures/fig1_AirwayDefense.eps}
-\caption{\textbf{Osmotic pressure of mucus is an important measure of human
-lung health.} (a) The mucus clearance system of human airways contains two
-parts: a brushlike periciliary layer (PCL) and a gellike mucus. The PCL has
-an inherent osmotic pressure due to the repulsion between the mucin
-molecules attached to cilia and airway surface. For healthy case the mucus
-osmotic pressure is relatively low ($\sim 300$ Pa). The brushlike
-periciliary layer is well hydrated and effective mucus clearance is
-maintained. (b) For patients with lung diseases, including COPD and CF, the
-mucus osmotic pressure (concentration) is much higher ($\sim 1000-3000$ Pa)
-and the PCL is dehydrated, resulting in impaired mucus clearance of human
-airways.}
-\label{fig:fig1_AirwayDefense}
+\includegraphics[scale=1]{figures/fig1_cartoon.eps}
+\caption{\textbf{cartoon}}
+\label{fig:illustration}
 \end{figure}
-
-We herein present the results of the measurements of osmotic pressure of
-endogenous human airway mucus using a custom-designed membrane osmometer. We
-systematically measure the osmotic pressure of mucus with concentration
-ranging from $0.002$ g/ml to $0.14$ g/ml, which covers the condition for
-health ($\sim 0.02$ g/ml), COPD ($\sim 0.04-0.06$ g/ml)\cite{Hogg2004}, and
-CF ($>0.07$ g/ml) \cite{Tarran2004, LW1963}. We find that the osmotic
-pressure \ of endogenous mucus is almost independent of pore size of the
-semipermeable membrane that separates mucus and reference buffer solution,
-suggesting that likely there are few free molecules contained in endogenous
-mucus. Moreoever, the osmotic pressure of endogenous mucus has a linear
-dependence of concentration well above the overlap concentration of mucins,
-the major molecules that form the mucus framework. This linear dependence
-continues to mucus concentration comparable to that of COPD ($0.06$ g/ml)
-and crosses over to a stronger dependence with higher power ($2.2$) at
-concentrations of CF mucus ($>0.07$ g/ml). The osmotic behavior of
-endogenous mucus reveals the robustness of human airway defense: The mucus
-clearance is likely to function within a reasonably wide range of mucus
-concentrations, within which the mucus\ osmotic pressure has slow linear
-dependence of concentration, and therefore, does not increase significantly
-enough to fully collapse the periciliary layer; it only completely fails for
-patients with lung diseases accompanied with extremely high mucus osmotic
-pressure, such as cystic fibrosis (CF), at which the periciliary layer is
-collapsed. Furthermore, the consistency between osmotic pressure of
-endogenous mucus and that of clinical sputum from patients highlights that
-mucus/sputum osmotic pressure could be a medical indication for the health
-status of the human lung.
 
 \begin{figure}[h]
 \centering
-%[height=3cm]
-\includegraphics[scale=1]{figures/fig2_osmometer.eps}
-\caption{\textbf{Schematic illustration of custom-designed membrane
-osmometer.} Left: The osmometer has a buffer chamber (filled with PBS) and a
-sample chamber separated by a semipermeable membrane with known pore size,
-characterized by molecular weight cut off (MWCO). The buffer chamber is in
-contact to a sensitive pressure transducer. The seal cover with a hollow
-tube (diameter $d=1$ mm) is used to reduce the evaporation of the sample
-while keeping the sample chamber in contact with air to maintain the
-atmospheric pressure in the sample chamber. Right: 3D illustration showing
-that the edge of osmotic membrane is covered by a vacuum sealant to reduce
-the effective area of osmotic membrane to make sure it is fully covered by
-endogenous mucus.}
-\label{fig:osmometer}
+\includegraphics[scale=1]{figures/fig2.eps}
+\caption{Determine the gel limit of soft PDMS elastomers by reducing the
+number of ratio of backbone polymers and side chains. (A) Time-sweeps to
+monitor the polymerization of samples with backbone polymer and side chains
+of number ratios nbb:nsc=1:10 (SEG10) and nbb:nsc=1:8 (SEG8). (B) Frequency
+dependence of the storage (G, filled symbols) and loss (G, empty symbols) of
+different samples obtained by classical time-temperature superposition
+shifts. The reference temperature is -20 oC and the measurements are
+performed at -20oC (red), 20oC (blue) and 80oC (green). The shifting
+parameters are the same for all samples: aT = 1/9.5 for 20 oC and 1/3 for 80
+oC; bT = 253/T, in which T is the absolute temperature. }
+\label{fig:11}
 \end{figure}
 
-We obtain endogenous mucus by culturing human bronchial epithelium (HBE)
-cells on an air-liquid interface\cite{Fulcher2005}, separated by a
-culture-insert membrane (Transwell-Clear; Corning Costar, Cambridge, MA).
-Mucins that are secreted by HBE cells accumulate on the surface of HBE
-culture to form a mucus gel. The mucus gel is not perturbed except for
-slowly addition of phosphate buffered saline (PBS). To measure the osmotic
-pressure of the accumulated endogenous mucus, we use a custom-designed
-osmometer, as illustrated in Figure \ref{fig:osmometer}, by placing the
-culture-insert membrane that is carefully excised with a scalpel directly
-onto semipermeable polyethersulfone membrane with $25$ mm in diameter
-(Millipore Inc., Bedford, MA). In the osmometer mucus is separated from
-phosphate buffered saline (PBS) by the semipermeable membrane with known
-pore size denoted by molecular weight cut off (MWCO), corresponding to the
-lowest molecular weight globular protein (in daltons) that is $90\%$
-retained by the membrane. The PBS is sealed in a chamber that is in contact
-with a sensitive pressure transducer (Omega Engineering, Stamford, CT),
-affixed to the bottom of the chamber. The osmotic pressure describes the
-tendency of solvent molecules to move through a semi-permeable membrane and
-into a solution containing a solute to which is impermeable. In our
-experiments it corresponds to the negative pressure applied to the buffer
-chamber that prevents the flow of water to mucus across the semipermeable
-membrane. We calibrate the osmometer with commercial osmotic pressure
-standards (Wescor Inc., Logan, UT) before measurements.
-
-We first investigate the dependence of mucus osmotic pressure on the MWCO of
-a semipermeable membrane. The hypothesis is that the osmotic pressure of
-mucus decreases with the increase of membrane pore size (MWCO). This is
-because mucus is believed to be a polydisperse gel that contains molecules
-with mass ranging from tens of kilo Daltons to millions of Daltons; as the
-pore size of the semipermeable membrane increases, more molecules in the
-mucus may pass through the membrane. These membrane-passing molecules do not
-contribute to the osmotic pressure of mucus. 
 \begin{figure}[h]
 \centering
-%[height=3cm]
-\includegraphics[scale=1]{figures/fig3_MWCO.eps}
-\caption{\textbf{Osmotic pressure of endogenous mucus depends weakly on
-molecular weight cut off (MWCO) of semipermeable membrane}. The pressure of
-endogenous mucus is almost independent of MWCO of semipermeable membrane for
-relatively low concentration ($0.03$ g/ml) (diamonds); as the concentration
-becomes larger (circles, squares, and triangles), the osmotic pressure
-slightly decreases, less than $30\%$, even the MWCO of membrane increases by 
-$50$ times from $10$ kDa to $500$ kDa. Data are shown as mean$\pm $SD with
-the number of samples from parrallel cell cultures ($n=3$ to $5$). }
-\label{fig:MWCO}
+\includegraphics[scale=1]{figures/fig3.eps}
+\caption{\textbf{cartoon}}
+\label{fig:illustration}
 \end{figure}
 
-Our measurement for osmotic pressure of endogenous mucus, however, argues
-against this hypothesis. To perform osmotic measurements we use osmotic
-membranes with molecular weight cutoff (MWCO) of $10$ kDa (pore diameter
-about $2.8$ nm extrapolated from the data in ref. \citenum{Singh1998}), $100$
-kDa (pore diameter $\sim 11$ nm measured by solute transport methods\cite%
-{Singh1998}), and $500$ kDa (pore diameter $\sim 28$ nm extrapolated from
-the data in ref. \citenum{Singh1998}). The osmotic pressure of endogenous
-mucus has a very weak dependence on the MWCO of semipermeable osmotic
-membrane that covers a wide range from $10$ kDa to $500$ kDa. In fact, the
-pressure at relatively lower mucus concentration of $0.03$ g/ml is almost
-independent of the pore size of semipermeable membrane, as shown by the
-diamonds in Figure \ref{fig:MWCO}. Moreover, only up to a high mucus
-concentration $\sim 0.10$ g/ml, which is larger than the typical
-concentration of COPD mucus, a slightly decrease in osmotic pressure is
-observed, as shown by the squares in Figure \ref{fig:MWCO}. Even at very
-high concentration of $0.14$ g/ml, the osmotic pressure of endogenous mucus
-decreases by only about $30\%$ as the MWCO of semipermeable membrane
-increases by $50$ times from $10$ kDa to $500$ kDa.
+\begin{tabular}{cccccc}
+&  &  &  &  &  \\ 
+&  &  &  &  &  \\ 
+&  &  &  &  &  \\ 
+&  &  &  &  &  \\ 
+&  &  &  &  & 
+\end{tabular}
 
-This is surprising as only up to $30\%$ (wt/wt) of the solid contents in
-mucus is contributed by mucins, the rest are mostly non-mucin proteins,
-whose molecular weight is typically below $500$ kDa\cite{Rose1992,
-Thornton2008, Fahy2010}. Therefore, they are expected to be able to freely
-pass through the $500$ kDa semipermeable membrane and thus do not contribute
-to the osmotic pressure of mucus when measured using $500$ kDa membrane.
-Consequently, the existence of free small molecules in mucus is expected to
-result in the phenomenon that as the MWCO of semipermeable membrane
-increases, the osmotic pressure of the mucus decreases tremendously. To
-estimate the effect of membrane-passing molecules on mucus osmotic pressure,
-we consider mucus as a polydisperse gel with concentration well above the
-overlap value. At such condition, the osmotic pressure $\pi $ of a polymer
-gel is independent of polymer molecular weight and is proportional to the
-concentration $c$ with a power law due to repulsion between overlapping
-polymers: $\pi \propto c^{2.3}$.\cite{Rubinstein2003} Therefore, reducing
-the amount of moelecules that effectively contribute to the osmotic pressure
-by $70\%$ leads to decrease of pressure by more than $90\%$. However, this
-prediction is found to be contrary to our results for osmotic pressure of
-endogenous mucus measured by semipermeable membrane with different values of
-MWCO. We therefore conclude that most small molecules are bonded to the
-network framework of endogenous mucus, which allows endogenous mucus to form
-a concrete gel.
-
-Considering that the osmotic pressure of endogenous mucus has a weak
-dependence on the pore size of semipermeable membrane, we use a membrane
-with MWCO of $100$ kDa to systematically measure mucus osmotic pressure at
-different concentrations. To obtain endogenous mucus with different
-concentrations, parallel cultures were exposed to various amounts of
-exogenous fluid ($5-50$ $\mu $l of PBS) approximately $1$ hour before the
-osmotic pressure measurements. The obtained mucus pressure data is termed
-\textquotedblleft on-cell\textquotedblright , as shown by empty circles in
-Figure \ref{fig:salt}. To measure the mucus concentration under each
-experimental condition, dry-to-wet ratio experiments \cite{Tarran2004} are
-performed in parallel cultures. The obtained concentration defined as the
-ratio of total mass of solids in mucus to the mass of mucus, including the
-salt contribution ($\sim 1\%$), is conventionally called $\%$ solids. By
-subtracting $1\%$ from this value one can convert $\%$ solids to the
-concentration in terms of g/ml, corresponding to the mass of solids
-excluding salts per unit volume of mucus, as the density of mucus is $\sim 1$
-g/ml. For instance, $2\%$ solids is equivalent to $0.01$ g/ml.
-
-The \textquotedblleft on-cell\textquotedblright\ measurement, however, only
-allows proper handling of mucus with concentration down to $0.02$ g/ml. As
-the concentration of mucus becomes lower, the mucus becomes more fluidic and
-falls over when inverting the excised culture insert membrane to place it on
-top of osmoitc membrane (Figure \ref{fig:osmometer}). Therefore, to
-investigate the mucus osmotic pressure at lower concentration, we collect
-mucus with desired concentrations from parallel cell cultures and use $\sim
-200$ $\mu $l for each measurement. The obtained mucus pressure is termed
-\textquotedblleft off-cell\textquotedblright , as presented by empty squares
-in Figure \ref{fig:salt}. We perform the osmotic measurement for
-\textquotedblleft off-cell\textquotedblright\ mucus immediately after the
-its collection to avoid possible degradation, as evidenced by comparable
-values to that obtained using \textquotedblleft on-cell\textquotedblright\
-mucus of similar concentration (squares and circles of similar
-concentrations in Figure \ref{fig:salt}). 
-\begin{figure}[h!]
-\centering
-%[height=3cm]
-\includegraphics[scale=1]{figures/fig4.eps}
-\caption{\textbf{Dependence of osmotic pressure for endogenous mucus and
-effects of salts.} On-cell: mucus that accumulates on the cell cultures
-without any perturbation except by adding PBS for dilution; both
-concentration and pressure for data points (circles) are shown as mean$\pm $%
-SD for mucus samples from parallel cell cultures ($n=3$ to $5$). Off-cell:
-mucus that are gently collected from parallel cell cultures using pipette
-and then diluted into different concentrations; concentration of data points
-(squares) is mean$\pm $SD for samples with $n=3$ to $5$. The measurement of
-osmotic pressure for off-cell mucus was performed immediately after
-collection to avoid possible degradation of mucus. The osmotic pressure
-indicates a linear dependence ($\protect\pi \sim c^{0.98\pm 0.08}$, red
-dash-dotted line) of concentration up to $\sim 0.06$ g/ml and then transits
-to higher power ($\protect\pi \sim c^{2.21\pm 0.17}$, red dashed line)
-dependence at concentration higher than $\sim 0.08$ g/ml). The crossover
-concentration between the linear and high power law ($2.3$) regimes is about 
-$0.075$ g/ml. Green line represents best fit to both on-cell and off-cell
-measurements of mucus osmotic pressure using phenomenological equation 
-\protect\ref{eq:pi_mucus-conc}. Colored symbols: Effects of salts on osmotic
-pressure of endogenous mucus. The fact that $7\%$ hypertonic saline (HS)
-(triangles) has negligible effect on the osmotic pressure of endogenous
-supports the current treatment to cystic fibrosis patients using HS: HS does
-not alter the properties of mucus but only draws water to mucus, makes the
-mucus less concentrated and thus lowers its osmotic pressure, leads to
-hydration of PCL, and therefore helps recovery of mucus clearance. However,
-120 mM CaCl$_{2}$ (stars) leads to decrease of mucus osmotic pressure, but
-slightly by $\sim 20\%$, possibly due to stronger screening of electrostatic
-repulsion between charged groups on mucins by divalent Ca$^{2+} $ ions. }
-\label{fig:salt}
-\end{figure}
-
-We measured the osmotic pressure of endogenous mucus with concentration
-ranging from $0.002$ g/ml to $0.14$ g/ml that covers the values spanning
-from health condition ($0.02-0.04$ g/ml), COPD ($0.04-0.06$ g/ml)\cite%
-{Hogg2004}, and CF ($>0.07$ g/ml) \cite{Tarran2004, LW1963}. We identify two
-regimes for the concentration dependent mucus osmotic pressure. As shown in
-Figure \ref{fig:salt}, within the low concentration regime (from $\sim 0.002$
-g/ml to $\sim 0.06$ g/ml), the osmotic pressure of mucus has a linear
-dependence on concentration $\pi \sim c^{\alpha }$, in which $\alpha
-=0.98\pm 0.08$ as determined by the best fit to data up to $0.06$ g/ml at
-logarithmic scales for both axes, as shown by dash-dotted line in Figure \ref%
-{fig:salt}. In the high concentration regime from $\sim 0.08$ g/ml to $\sim
-0.14$ g/ml, the osmotic pressure increases as a higher power of
-concentration $\pi \sim c^{\alpha }$, where $\alpha =2.21\pm 0.17$ is
-obtained by the best fit to data above $0.08$ g/ml at logarithmic scales for
-both axes, as shown by the dashed line in Figure \ref{fig:salt}. The
-crossover mucus concentration for these two regimes is about $c^{\ast
-}\simeq 0.075$ g/ml.
-
-To understand the behavior of osmotic pressure for endogenous mucus, we
-first back to the well-understood osmotic pressure of regular polymer
-solutions. Typically osmotic pressure of polymer solutions in a good solvent
-can be described by a crossover phenomenological equation \cite%
-{Rubinstein2003}
-
-\begin{equation}
-\pi \simeq \frac{N_{Av}k_{B}T}{M}c[1+(c/c^{\ast })^{\alpha -1}]
-\label{eq:pi}
-\end{equation}%
-where $N_{Av}$ is the Avogadro number, $k_{B}$ is the Boltzmann constant, $T$
-is the absolute temperature, $M$ corresponds to the number average molar
-mass of polymer, and $c^{\ast }$ is the polymer overlap concentration. The
-linear component in eq. \ref{eq:pi} represents the van't Hoff law for
-osmotic pressure of dilute solutions, in which the contribution of molecules
-to osmotic pressure is about $k_{B}T$ per molecule. The higher power terms
-accounts for the repulsion between overlapping polymers. Typically the value
-of exponent $\alpha $ is about $2.25$ for linear or branched polymers in
-good solvent \cite{Rubinstein2003}.
-
-It seems that the two-regime behavior of mucus osmotic pressure is
-consistent with the two-regime prediction from regular polymer solutions.
-However, the crossover concentration, $0.08$ g/ml, for endogenous mucus is
-more than one order of magnitude larger than the estimated value: $c^{\ast
-}\simeq M/\left( 4\pi R^{3}/3\right) \simeq \lbrack 10\times 10^{6}$ g/molar$%
-]/[4\pi (100$ nm$)^{3}/3]\simeq 0.004$ g/ml, in which $M\simeq 10\times
-10^{6}$ g/molar is the typical molecular weight of mucin molecules, $R\simeq
-100$ nm corresponds to the size of mucin moecules.\cite{Bansil1995,
-Sheehan2000,Kesimer2010} This inconsistency suggests that the besides the
-repulsion between overlapping molecules, there should be some other facts
-that contribute to the osmotic pressure of mucus.
-
-Indeed, mucin molecules are charged biological polymers; moreoever, there
-are interacting groups between mucin molecules. Therefore, the osmotic
-pressure of mucus $\pi $ is contributed from three parts: ionic
-contribution, $\pi _{ion}$, polymeric contribution due to repulsion between
-molecules, $\pi _{poly}$, and contribution from interaction between
-molecules, $\pi _{int}$:
-
-\begin{equation}
-\pi =\pi _{ion}+\pi _{poly}+\pi _{int}  \label{eq:pi_mucus-1}
-\end{equation}%
-The ionic contribution is $\pi _{ion}/k_{B}T\simeq zc+z^{2}c^{2}/\left(
-4c_{s}\right) $, in which $c$ is the number concentration of charged
-molecules, $z$ is the uncondensed charge groups per charged molecule, and $%
-c_{s}$ is the number of concenration of salts.\cite{Dobrynin2005} The
-polymeric contribution is about $k_{B}T$ per correlation volume (eq. \ref%
-{eq:pi}): $\pi _{poly}/k_{B}T\simeq 1/\xi ^{3}$.\cite{Rubinstein2003} Here
-the correlation length $\xi $ is proportional to concentration $c$ by a
-power law in good solvent: $\xi \approx R(c/c^{\ast })^{-0.76}\approx
-R\left( c_{n}/c_{n}^{\ast }\right) ^{-0.76}$, in which $R$ is the size
-molecules in mucus. The interaction part tends to reduce the osmotic
-pressure of mucus by holding the molecules together; its contribution is
-proportional to the number density of interacting groups (pair of
-interacting sites). The probability for an interacting site to form a pair
-with another interacting site is proportional to $c^{2}$. Therefore, the
-contribution to mucus osmotic pressure from the interaction between
-molecules in the mucus is: $\pi _{ion}/k_{B}T\simeq -\gamma c^{2}$, in which 
-$\gamma $ is a parameter that corresponds to the volume occupied by a
-molecule. Therefore, the osmotic pressure of mucus (eq. \ref{eq:pi_mucus-1})
-can rewritten as
-
-\begin{equation}
-\pi /k_{B}T\simeq zc_{n}+\frac{z^{2}c_{n}^{2}}{4c_{n}^{s}}+\frac{1}{R^{3}}%
-\left( \frac{c_{n}}{c_{n}^{\ast }}\right) ^{2.3}-\gamma c_{n}^{2}
-\label{eq:pi-number}
-\end{equation}%
-Note that in eq. \ref{eq:pi-number} $c_{n}$ has the unit of the number of
-molecules per volume. In our experiments the concentration $c$ is measured
-in terms of g/ml. Denoting the average mass of molecules $M$ in the mucus by
-million Dalton ($10^{6}$ g/molar), the relation between concentration $c_{n}$
-and concentration $c$ is: $c_{n}=\left( cN_{Av}/M\right) \unit{m}^{-3}$.
-Considering the small difference between power $2.3$ and $2.0$, we
-approximate the osmotic pressure of mucus (eq. \ref{eq:pi-number}) by two
-parts%
-\begin{eqnarray}
-\pi &\simeq &\frac{k_{B}TN_{Av}}{m^{3}}\left[ \frac{z}{M}c+\lambda
-_{2}\left( \frac{c}{c^{\ast }}\right) ^{2.3}\right]  \nonumber \\
-&\simeq &2500Pa\left[ \lambda _{1}c+\lambda _{2}\left( c/c^{\ast }\right)
-^{2.3}\right]  \label{eq:pi_mucus-conc}
-\end{eqnarray}%
-in which $c$ has the unit of g/ml, $\lambda _{1}=z/M$ stands for the number
-of charged groups per million Dalton, $\lambda _{2}$ represents the
-contribution from the polymeric repulsion, attraction between molecules, and
-counterions. The value of $\lambda _{1}=5.1$ is determined by weighted fit
-to the data with concentration below $0.06$ g/ml. Using the predetermined
-value of $\lambda _{1}=5.1$, $\lambda _{2}=0.22$ and $c^{\ast }=0.08$ g/ml
-are determined by the best fit to all data points, as shown by the solid
-line in Figure \ref{fig:salt}. Note that $c^{\ast }$ is the effective
-crossover concentration that takes into account the contribution from
-interacting sites and counterions; it is shifted to higher value in
-comparison to that estimated from polymeric contribution. This
-phenomenological equation captures the main feature of the mucus osmotic
-pressure, as presented by the solid line in Figure \ref{fig:salt}. 
-\begin{figure}[h!]
-\centering
-%[height=3cm]
-\includegraphics[scale=1]{figures/fig5_clinic.eps}
-\caption{\textbf{Osmotic pressure of sputum from patients.} Symbols: osmotic
-pressure measured by using semipermeable membranes with MWCO of $10$ kDa
-(empty circles) and $100$ kDa (filled circles). Lines: osmotic pressure of
-endogenous mucus that is adapted from Figure \protect\ref{fig:salt}. The
-osmotic of clinical sputum is in qualitatively agreement with that of
-endogenous mucus, which highlights that osmotic pressure of mucus/sputum
-could be used as a measure for the health status of human lungs.}
-\label{fig:clinic}
-\end{figure}
-
-We also exploit the effect of the salts on mucus osmotic pressure. We adjust
-the salt concentration of mucus using hypertonic saline; meanwhile, we
-replace the PBS in the buffer chamber with solution of the same
-concentration of salts as mucus. At the physiological condition with salt
-concentration of $150$ mM the Debye screening length is about $r_{D}\simeq
-0.9\unit{nm}\propto c_{s}^{-1/2}$\cite{Dobrynin2005}. Increasing the salt
-concentration to $7\%$ results in further decrease of Debye screening length
-down to $0.3$ nm. However, notice that the cross dimension of mucin
-molecules is about $5$ nm\cite{Jentoft1990}, which is more than $5$ times
-larger than the Debye screening length of at physiological condition.
-Therefore, increasing the extent of salt screening do not affect the osmotic
-pressure contributed from counter ions. Consistent with our expectation, the
-addition of monovalent salt ions (NaCl) almost does not affect mucus osmotic
-pressure. This is not surprising as the charged groups are highly screened
-by salt ions. This finding favorably reasons the physical basis for using
-hypertonic saline as one of the effective and major treatments to patients
-with lung diseases, especially CF. Adding more salts might not alter the
-structure of mucus, but draws water into mucus, which results in dilution of
-mucus and therefore lower osmotic pressure, and consequently, improves the
-clearance of mucus. However, introducing divalent ions by adjusting mucus
-with $120$ mM CaCl$_{2}$ leads to decrease in osmotic pressure of $\sim 20\%$%
-, as shown by the stars in Figure \ref{fig:salt}. This might be because
-divalent ions may mediate the repulsion between molecules in solution in a
-stronger way comparing to the monovalent ions. This finding is consistent
-with the fact that mucin molecules are densely packed within granules before
-they are released, where they are surrounded by extensive calcium ions\cite%
-{Kesimer2010}. A complete understanding of mucus osmotic pressure and the
-effects of salts on their osmotic pressure remains a puzzle requiring
-further inquiry of fundamental polymer physics properties of mucin molecules.
-
-Finally we compare the osmotic pressure of endogenous mucus with that of
-sputum samples donated by patients. We collect sputum from patients with
-different diseases, measure the sputum concentration, and quantify the
-osmotic pressure. We measure the pressure using semipermeable membranes of
-two different molecular weight cut-off, $10$ kDa and $100$ kDa. We find that
-osmotic pressure of clinical mucus for $100$ kDa is systematically lower
-than that measure using $10$ kDa, as shown in Figure \ref{fig:clinic}, which
-is different from that for endogenous mucus, as shown in Figure \ref%
-{fig:MWCO}. This is because clinical samples are not as \textquotedblleft
-clean\textquotedblright\ as endogenous mucus. Clinical sputum samples
-contain lots of cell debris, blood residues, and other small molecules that
-may pass through the osmotic membrane as its MWCO increases. Therefore, the
-osmotic pressure of sputum decreases with increase of MWCO of semipermeable
-membrane. Nevertheless, the interesting behavior is that the pressure of
-clinical sputum is in qualitatively agreement with that of endogenous mucus,
-as shown by the solid line in Figure \ref{fig:clinic}. The consistency in
-trend of osmotic pressure for endogenous mucus from cell cultures and
-clinical sputum suggests osmotic pressure of mucus/sputum could be an
-important medical indication of the health status of human lung.
-
-Our work highlights the robustness of human airway defense. It can function
-within a wide range of mucus concentrations because of relatively slow
-increase of mucus osmotic pressure at relatively low concentrations.
-Importantly, osmotic pressure of mucus/sputum could be used an medical
-indication to monitor the health status of lung for patients. Furthermore,
-the striking difference in osmotic pressure of endogenous mucus from regular
-polymer solutions highlights the unique properties that mucus may posses. It
-also brings attention to use endogenous, instead of reconstituted mucus,
-when studying its unique properties, such as vicoelastic properties that is
-critical to maintain effective interaction between mucus and cilia\cite%
-{Litt1970} and serving as a protective barrier by trapping external objects%
-\cite{Knowles2002}.
-
-\textbf{Acknowledgement.} This article is dedicated to Prof. John K.
-Sheehan, for years of support, fruitful discussions and his insights into
-mucus. We acknowledge financial support from the National Science Foundation
-under grants CHE-0911588, DMR-0907515, DMR-1121107, DMR-1122483, and
-CBET-0609087, the National Institutes of Health under grants R01HL077546 and
-P50HL107168, and Cystic Fibrosis Foundation under grant RUBIN09XX0.
+\textbf{Acknowledgment.} We acknowledge financial support from the National
+Science Foundation under grants CHE-0911588, DMR-0907515, DMR-1121107,
+DMR-1122483, and CBET-0609087, the National Institutes of Health under
+grants R01HL077546 and P50HL107168, and Cystic Fibrosis Foundation under
+grant RUBIN09XX0.
 
 %The conclusions section should come at the end of article. For the reference
 %section, the style file rsc.bst can be used to generate the correct
